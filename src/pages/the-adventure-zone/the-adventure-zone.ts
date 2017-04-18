@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { RssServiceProvider, FeedItem } from '../../providers/rss-service';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
-/**
- * Generated class for the TheAdventureZonePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-the-adventure-zone',
@@ -14,7 +10,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TheAdventureZonePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  episodes: FeedItem[];
+  loading: Boolean;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private rssService: RssServiceProvider, private iab: InAppBrowser) {
+    this.loadEpisodes();
+  }
+
+  loadEpisodes() {
+    this.episodes = [];
+    this.loading = true;
+    this.rssService.getEpisodes().subscribe(res => {
+      this.episodes = res;
+      this.loading = false;
+    });
+  }
+
+  public openEpisode(url: string) {
+    let browser = this.iab.create(url, 'blank'); browser.show();
   }
 
   ionViewDidLoad() {
