@@ -22,8 +22,7 @@ export class FeedItem {
 export class RssServiceProvider {
   constructor(private http: Http) {}
 
-  public getEpisodes() { 
-    var feedUrl = 'http://adventurezone.libsyn.com/rss';
+  public getEpisodes(feedUrl) { 
 
     var url = 'https://query.yahooapis.com/v1/public/yql?q=select%20title%2Clink%2Cdescription%2CpubDate%20from%20rss%20where%20url%3D%22' + encodeURIComponent(feedUrl) + '%22&format=json'; 
 

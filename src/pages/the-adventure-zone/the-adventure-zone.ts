@@ -18,9 +18,10 @@ export class TheAdventureZonePage {
   }
 
   loadEpisodes() {
+    let url = 'http://adventurezone.libsyn.com/rss';
     this.episodes = [];
     this.loading = true;
-    this.rssService.getEpisodes().subscribe(res => {
+    this.rssService.getEpisodes(url).subscribe(res => {
       this.episodes = res;
       this.loading = false;
     });
