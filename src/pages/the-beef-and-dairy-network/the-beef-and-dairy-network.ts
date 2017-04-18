@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the TheBeefAndDairyNetworkPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-the-beef-and-dairy-network',
@@ -15,6 +9,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class TheBeefAndDairyNetworkPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  openRssPage() {
+    this.navCtrl.push('RssFeedsPage', 'beefanddairynetwork');
   }
 
   ionViewDidLoad() {
