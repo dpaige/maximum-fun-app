@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{navParams.data.title}}</ion-title>
+  </ion-navbar>
+  <img src="{{navParams.data.banner}}" width="100%">
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-segment>
+    <ion-segment-button icon-left (click)="openTwitter()">
+      <ion-icon name="logo-twitter"></ion-icon>
+      Twitter
+    </ion-segment-button>
+
+    <ion-segment-button icon-left (click)="openFacebook()">
+      <ion-icon name="logo-facebook"></ion-icon>
+      FB Page
+    </ion-segment-button>
+  </ion-segment>
+
+  <p>{{navParams.data.bio}}</p>
+
+  <button ion-button icon-left (click)="openRssPage()">
+    <ion-icon name="paper"></ion-icon>
+    See Episodes
+  </button>
+</ion-content>

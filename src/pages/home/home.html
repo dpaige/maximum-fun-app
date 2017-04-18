@@ -5,7 +5,7 @@
 <ion-content padding>
   
   <ion-list>
-    <ion-item *ngFor="let podcast of podcasts" (click)="openPodcastPage(podcast.page)">
+    <ion-item *ngFor="let podcast of podcasts" (click)="openPodcastPage(podcast)">
       <ion-thumbnail item-left>
         <img src="{{podcast.image}}">
       </ion-thumbnail>

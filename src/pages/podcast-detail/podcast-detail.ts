@@ -4,31 +4,31 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @IonicPage()
 @Component({
-  selector: 'page-the-adventure-zone',
-  templateUrl: 'the-adventure-zone.html',
+  selector: 'page-podcast-detail',
+  templateUrl: 'podcast-detail.html',
 })
-export class TheAdventureZonePage {
+export class PodcastDetailPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private iab: InAppBrowser) {
-    
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams, private iab: InAppBrowser) { }
 
   openRssPage() {
-    this.navCtrl.push('RssFeedsPage', 'adventurezone');
+    this.navCtrl.push('RssFeedsPage', this.navParams.data.rss);
   }
 
-  public openTwitter(twitterName: string) {
+  public openTwitter() {
+    let twitterName = this.navParams.data.twitter;
     let url = 'https://twitter.com/' + twitterName;
     let browser = this.iab.create(url, 'blank'); browser.show();
   }
 
-  public openFacebook(facebookPageName: string) {
+  public openFacebook() {
+    let facebookPageName = this.navParams.data.facebook;
     let url = 'https://facebook.com/' + facebookPageName;
     let browser = this.iab.create(url, 'blank'); browser.show();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TheAdventureZonePage');
+    console.log('ionViewDidLoad PodcastDetailPage');
   }
 
 }
