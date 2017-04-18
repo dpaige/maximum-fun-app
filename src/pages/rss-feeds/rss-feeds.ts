@@ -14,11 +14,10 @@ export class RssFeedsPage {
   loading: Boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private rssService: RssServiceProvider, private iab: InAppBrowser) {
-    this.loadEpisodes(navParams);
+    this.loadEpisodes(navParams.data);
    }
 
-  loadEpisodes(navParams) {
-    let url = 'http://' + navParams.data + '.libsyn.com/rss';
+  loadEpisodes(url) {
     this.episodes = [];
     this.loading = true;
     this.rssService.getEpisodes(url).subscribe(res => {
