@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
 
 @IonicPage()
@@ -14,7 +14,9 @@ export class HomePage {
     this.podcasts= [
       { title: "The Adventure Zone", image: "assets/img/The_Adventure_Zone.png", hosts: "with Justin, Travis, Griffin, and Clint McElroy", page: "TheAdventureZonePage" },
       { title: "The Beef and Dairy Network Podcast", image: "assets/img/The_Beef_and_Dairy_Network.png", hosts: "with Benjamin Partridge", page: "TheBeefAndDairyNetworkPage" },
-      { title: "Baby Geniuses", image: "assets/img/Baby_Geniuses.png", hosts: "with Emily Heller and Lisa Hanawalt", page: "BabyGeniusesPage" }
+      { title: "Baby Geniuses", image: "assets/img/Baby_Geniuses.png", hosts: "with Emily Heller and Lisa Hanawalt", page: "BabyGeniusesPage" },
+      { title: "Bunker Buddies with Andie and Travis", image: "assets/img/Bunker_Buddies.png", hosts: "with Andie Bolt and Travis McElroy", page: "BunkerBuddiesPage" },
+      { title: "Dave Hill's Podcasting Incident", image: "assets/img/Dave_Hills_Podcasting_Incident.png", hosts: "with Dave Hill", page: "DaveHillsPodcastingIncidentPage"}
     ];
   }
 
