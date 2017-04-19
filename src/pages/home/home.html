@@ -1,17 +1,19 @@
 <ion-header>
-  <ion-title>Maximum Fun Podcasts</ion-title>
+  <ion-navbar color=maxfun_yellow>
+    <ion-title class="header">Maximum Fun Podcasts</ion-title>
+  </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="content">
   
-  <ion-list>
-    <ion-item *ngFor="let podcast of podcasts" (click)="openPodcastPage(podcast)">
+  <ion-list class="list">
+    <ion-item *ngFor="let podcast of podcasts" (click)="openPodcastPage(podcast)" class="feed-item">
       <ion-thumbnail item-left>
         <img src="{{podcast.image}}">
       </ion-thumbnail>
-      <h2>{{podcast.title}}</h2>
-      <p><i>{{podcast.hosts}}</i></p>
-      <p>{{podcast.type}}</p>
+      <h2 [innerHtml]>{{podcast.title}}</h2>
+      <p [innerHtml]><i>{{podcast.hosts}}</i></p>
+      <p [innerHtml]>{{podcast.type}}</p>
     </ion-item>
     
   </ion-list>

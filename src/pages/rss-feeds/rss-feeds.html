@@ -1,16 +1,14 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Podcast Episodes</ion-title>
+  <ion-navbar color=maxfun_yellow>
+    <ion-title class="header">Podcast Episodes</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
   <ion-list *ngIf="!loading">
     <ion-item *ngFor="let item of episodes" (click)="openEpisode(item.link)" class="feed-item">
-      <b>{{item.title}}</b>
+      <b [innerHtml]>{{item.title}}</b>
       <p [innerHtml]="item.description"></p>
     </ion-item>
   </ion-list>

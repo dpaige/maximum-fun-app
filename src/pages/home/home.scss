@@ -1,3 +1,19 @@
 page-home {
+  .header {
+    font-family: 'Copse', serif;
+  }
+  .feed-item {
+    background-color: #d0edf5;
+    border-radius: 10px;
+    margin: 5px;
+    border-bottom: 0px;
+    border: 0px !important;
 
+    .item-inner {
+      border: 0px !important;
+    }
+  }
+  .content {
+    background-color: gray;
+  }
 }
