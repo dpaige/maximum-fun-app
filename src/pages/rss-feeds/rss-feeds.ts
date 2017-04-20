@@ -31,7 +31,7 @@ export class RssFeedsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TheAdventureZonePage');
+    console.log('ionViewDidLoad RssFeedsPage');
   }
 
 }

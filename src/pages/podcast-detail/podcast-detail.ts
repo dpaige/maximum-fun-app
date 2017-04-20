@@ -18,13 +18,13 @@ export class PodcastDetailPage {
   public openTwitter() {
     let twitterName = this.navParams.data.twitter;
     let url = 'https://twitter.com/' + twitterName;
-    let browser = this.iab.create(url, 'blank'); browser.show();
+    let browser = this.iab.create(url); browser.show();
   }
 
   public openFacebook() {
     let facebookPageName = this.navParams.data.facebook;
     let url = 'https://facebook.com/' + facebookPageName;
-    let browser = this.iab.create(url, 'blank'); browser.show();
+    let browser = this.iab.create(url); browser.show();
   }
 
   ionViewDidLoad() {

@@ -34,14 +34,17 @@ export class RssServiceProvider {
       }
 
       let objects = res['item']; 
-      var length = 20;
+      var length = 80;
     
       for (let i = 0; i < objects.length; i++) {
         let item = objects[i];
-        var trimmedDescription = item.description.length > length ? item.description.substring(0, 60) + "..." :
+        var trimmedDescription = item.description.length > length ? item.description.substring(0, 80) + "..." :
         item.description;
 
-        let newFeedItem = new FeedItem(trimmedDescription, item.link, item.title, item.pubDate);
+        let dateArray = item.pubDate.split(' ');
+        item.dateNoTime = dateArray[0] + ' ' +  dateArray[1] + ' ' + dateArray[2] + ' ' + dateArray[3];
+
+        let newFeedItem = new FeedItem(trimmedDescription, item.link, item.title, item.dateNoTime);
         episodes.push(newFeedItem);
       }
       return episodes

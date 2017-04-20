@@ -5,10 +5,11 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="content">
   <ion-list *ngIf="!loading">
     <ion-item *ngFor="let item of episodes" (click)="openEpisode(item.link)" class="feed-item">
-      <b [innerHtml]>{{item.title}}</b>
+      <b [innerHtml]="item.title"></b>
+      <p [innerHtml]="item.date"></p>
       <p [innerHtml]="item.description"></p>
     </ion-item>
   </ion-list>

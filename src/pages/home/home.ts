@@ -19,7 +19,7 @@ export class HomePage {
         rss: "http://adventurezone.libsyn.com/rss", 
         twitter: "TheZoneCast", 
         facebook: "theadventurezone", 
-        banner: "http://www.maximumfun.org/sites/all/themes/az/logo.png", 
+        banner: "assets/img/adventure_zone_banner.png", 
         bio: "Justin, Travis and Griffin McElroy from My Brother, My Brother and Me have recruited their dad Clint for a campaign of high adventure. Join the McElroys as they find their fortune and slay an unconscionable number of ... you know, kobolds or whatever in ... The Adventure Zone. Follow us on Twitter @TheZoneCast, post with the tag #TAZ and be sure to subscribe on iTunes so you never miss a new episode: http://itunes.com/adventurezone",
         type: "Comedy"
       },
@@ -305,7 +305,7 @@ export class HomePage {
         rss: "http://feeds.feedburner.com/OhNoPodcast",
         twitter: "OhNoPodcast",
         facebook: "ONRAC",
-        banner: "http://www.maximumfun.org/sites/all/themes/onrac/logo.png",
+        banner: "assets/img/oh_no_ross_and_carrie_banner.png",
         bio: "Welcome to Oh No, Ross and Carrie!, the show where we don’t just report on fringe science, spirituality, and claims of the paranormal, but take part ourselves. Follow us as we join religions, undergo alternative treatments, seek out the paranormal, and always find the humor in life’s biggest mysteries. We show up - so you don’t have to. Every month we share a new investigation, along with occasional bonus interviews and updates.",
         type: "Culture"
       },
