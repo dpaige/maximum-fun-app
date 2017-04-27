@@ -97,7 +97,7 @@ export class HomePage {
         twitter: "",
         facebook: "Jordan-Jesse-GO-10389486885",
         banner: "http://www.maximumfun.org/blog/uploaded_images/jjgologo-793426.jpg",
-        bio: "Jordan, Jesse, Go! is a freewheeling comedy podcast about life in your twenties and everything else. Your hosts are Jesse Thorn, 'America's Radio Sweetheart,' and Jordan Morris, 'Boy Detective.' More About Jordan, Jesse, Go!",
+        bio: "Jordan, Jesse, Go! is a freewheeling comedy podcast about life in your twenties and everything else. Your hosts are Jesse Thorn, 'America's Radio Sweetheart,' and Jordan Morris, 'Boy Detective.'",
         type: "Comedy"
       },
       { 
